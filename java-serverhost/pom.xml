@@ -39,7 +39,19 @@
 		</dependency>
 
 	</dependencies>
+  <repositories>
+   <repository>
+    <id>myCentral</id>
+    <name>central</name>
+    <url>https://repo1.maven.org/maven2</url>
+   </repository> 
+   <repository>
+    <id>jbossPublic</id>
+    <name>jboss-public</name>
+    <url>https://repository.jboss.org/nexus/content/groups/public</url>
+   </repository> 
 
+  </repositories>
   <build>
     <finalName>demo</finalName>
     <plugins>
