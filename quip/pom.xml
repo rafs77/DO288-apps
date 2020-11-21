@@ -58,4 +58,15 @@
     <!-- WildFly Swarm Fractions -->
     
   </dependencies>
+  <repositories>
+   <repository>
+    <id>centralMaven</id>
+    <url>https://repo1.maven.org/maven2</url> 
+   </repository>
+   <repository>
+    <id>jbossPublic</id>
+    <url>https://repository.jboss.org/nexus/content/groups/public</url> 
+   </repository>
+   
+  </repositories
 </project>
