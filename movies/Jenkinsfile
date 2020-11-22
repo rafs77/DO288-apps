@@ -100,7 +100,7 @@ pipeline {
                 openshift.withProject(){
                   def pods=openshift.selector('dc','movies').related('pods')
                   pods.untilEach(1){
-                     return (it.object().status.phase == "Running)
+                     return (it.object().status.phase == "Running")
                   }
                 }
               }
