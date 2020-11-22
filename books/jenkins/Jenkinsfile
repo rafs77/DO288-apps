@@ -57,7 +57,6 @@ pipeline {
                         oc delete all -l app=${APP_NAME}
                         sleep 5
                    '''
-
                 echo '### Creating a new app in DEV env ###'
                 //TODO: Create a new app and expose the service
                 sh '''
@@ -151,11 +150,10 @@ pipeline {
                           def deployment = openshift.selector("dc", "${APP_NAME}").rollout()
                           openshift.selector("dc", "${APP_NAME}").related('pods').untilEach(1){
                             return (it.object().status.phase == "Running" )
-                           
+                          } 
                         } 
-                        echo "Deployment to Staging env is complete. Access the app at the URL http://${routeHost}."
-                        
-                    }
+                    } 
+                    echo "Deployment to Staging env is complete. Access the app at the URL http://${routeHost}."                                            
                 }
             }
         }
