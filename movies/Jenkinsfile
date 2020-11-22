@@ -99,7 +99,7 @@ pipeline {
           steps{   
             script{
               openshift.withCluster(){
-                openshift.withProject( "{DEV_PROJECT}" ){
+                openshift.withProject( "${DEV_PROJECT}" ){
                   def pods=openshift.selector('dc','movies').related('pods')
                   pods.untilEach(1){
                      return (it.object().status.phase == "Running")
